@@ -1,0 +1,86 @@
+
+/* Container to hold tasks */
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: start; 
+    margin: 20px auto; 
+    max-width: 100%;
+}
+/* Individual task card */
+.task-container {
+    flex: 1 1 calc(33.33% - 20px); 
+    max-width: calc(33.33% - 20px);
+    justify-content: space-between;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: antiquewhite;
+    min-height: 200px;
+}
+.nav-link{
+    font-size: large;
+}
+#navnab{
+    margin-right: 20px;
+}
+#title{
+    margin-left: 20px;
+}
+@media (max-width: 992px) { /* Medium screens */
+    .task-container {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) { /* Small screens */
+    .task-container {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}
+.heading{
+    display: flex;
+}
+.badge{
+     height: fit-content;
+}
+#loginbtn{
+    width: 100%;
+}
+.container-fluid h2{
+    font-weight: 400;
+    margin-left: 150px;
+}
+.container-fluid h3{
+    font-weight: 400;
+    margin-left: 100px;
+}
+.container-fluid h5{
+    font-weight: 400;
+    margin-left: 150px;
+}
+.container-fluid img{
+    width: 200px;
+    margin-left: 125px;
+}
+.container-fluid{
+    background-color:aliceblue;
+    width: 500px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    padding: 30px;
+}
+.error{
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+.good{
+    color: green;
+    text-align: center;
+    padding: 10px;
+}

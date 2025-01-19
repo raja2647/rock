@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header  }}
+<body>
+    {{> navbar  }}
+    <button class="btn btn-warning mt-3 ms-3" type="button" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add task</button>
+       <div class="container"> 
+          <div class="task-container">
+            <div class="heading">
+            <h1>Maths work</h1>
+            <span class="badge bg-success rounded-pill">New</span>
+          </div>
+            <p>
+                Understand the Problem: Carefully read the problem. Identify what's being asked and the information provided.
+                Plan the Solution: Think about the strategies or formulas you might use to solve the problem. Sketch out a rough plan in your mind or on paper.
+            </p>
+            <p class="date"><strong>Date:</strong>2025-01-09</p>
+            <div class="button-container">
+            <button type="button" onclick="deleteItem(event)" class="btn btn-secondary" id="delete">Delete</button>
+            <button type="button" onclick="editTask(event)" class="btn btn-primary" id="edit">Edit</button>
+        </div>
+         </div>
+    </div>
+    <div class="modal fade" id="addTaskModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                     <h5 class="modal-title">Add Task</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="taskName" class="form-label">Task Name</label>
+                            <input class="form-control" id="taskName"type="text" placeholder="Enter Task Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskDescription" class="form-label">Task Description</label>
+                            <textarea class="form-control" id="taskDescription" type="text" placeholder="Enter Task Description"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskDate" class="form-label">Task Date</label>
+                            <input type="date" class="form-control" id="taskDate" placeholder="Select Task Date">
+                        </div>                        
+                        <div class="mb-3">
+                            <label for="taskStatus">Task Status</label>
+                            <select class="form-select" name="" id="taskStatus">
+                                <option selected >New</option>
+                                <option>In Progress</option>
+                                <option>Completed</option>
+                                <option>Canceled</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-primary" id="addTask">Save Task</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-secondary">Close</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    <script src="/script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

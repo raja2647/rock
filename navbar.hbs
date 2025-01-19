@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="#" id="title">TODO LIST</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto" id="navnab">
+               {{#if user }}
+               <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                 <li class="nav-item"><a class="nav-link" href="/profile">profile</a></li>
+                 <li class="nav-item"><a class="nav-link" href="/auth/logout">logout</a></li>
+                 {{else}}
+               <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                 <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                 {{/if}}
+            </ul>
+       </div>
+       </nav>
